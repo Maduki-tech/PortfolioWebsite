@@ -7,7 +7,7 @@ import { Button } from "../ui/button";
 import Link from "next/link";
 import { ModeToggle } from "../ui/ModeToggle";
 const navigation = [
-  { name: "About me", href: "#" },
+  { name: "About me", href: "#aboutme" },
   { name: "Projects", href: "#" },
   { name: "CV", href: "#" },
   { name: "Contact", href: "#" },
@@ -16,7 +16,8 @@ const navigation = [
 export default function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   return (
-    <header className="absolute inset-x-0 top-0 z-50 rounded-b-xl bg-foreground/20 shadow-md shadow-shadow/50">
+      <header 
+      className="absolute inset-x-0 top-0 z-50 rounded-b-xl bg-foreground/20 shadow-md shadow-accent">
       <nav
         aria-label="Global"
         className="flex items-center justify-between p-6 lg:px-8"
@@ -33,7 +34,12 @@ export default function Navigation() {
         </div>
         <div className="hidden lg:flex lg:gap-x-12">
           {navigation.map((item) => (
-            <Button asChild variant={"link"} key={item.name}>
+            <Button
+              asChild
+              variant={"link"}
+              key={item.name}
+              className="decoration-accent hover:scale-105 hover:text-accent hover:transition-transform hover:duration-300"
+            >
               <Link href={item.href} className="text-sm/6 font-semibold">
                 {item.name}
               </Link>
