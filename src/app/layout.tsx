@@ -15,8 +15,12 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${GeistSans.variable}`}>
-      <body className="bg-background">
+    <html
+      lang="en"
+      className={`${GeistSans.variable} scroll-smooth`}
+      suppressHydrationWarning
+    >
+      <body className="bg-background" suppressHydrationWarning>
         <ThemeProvider
           attribute={"class"}
           defaultTheme="system"

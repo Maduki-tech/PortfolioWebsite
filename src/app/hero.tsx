@@ -27,7 +27,10 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative flex min-h-screen w-full items-center justify-center overflow-hidden">
+    <section
+      id="home"
+      className="relative flex min-h-screen w-full items-center justify-center overflow-hidden"
+    >
       <div className="absolute inset-0">
         <FloatingPaths position={1} />
         <FloatingPaths position={-1} />

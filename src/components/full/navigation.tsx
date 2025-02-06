@@ -6,18 +6,18 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { Button } from "../ui/button";
 import Link from "next/link";
 import { ModeToggle } from "../ui/ModeToggle";
+
 const navigation = [
+  { name: "Home", href: "#home" },
   { name: "About me", href: "#aboutme" },
-  { name: "Projects", href: "#" },
-  { name: "CV", href: "#" },
-  { name: "Contact", href: "#" },
+  { name: "Projects", href: "#projects" },
+  { name: "Contact", href: "#contact" },
 ];
 
 export default function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   return (
-      <header 
-      className="absolute inset-x-0 top-0 z-50 rounded-b-xl bg-foreground/20 shadow-md shadow-accent">
+    <header className="sticky inset-x-0 top-0 z-50 rounded-b-xl bg-foreground/20 shadow-md shadow-accent">
       <nav
         aria-label="Global"
         className="flex items-center justify-between p-6 lg:px-8"
